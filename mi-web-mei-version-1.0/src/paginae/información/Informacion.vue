@@ -5,7 +5,7 @@
 
 <template>
     <div>
-
+<h1>informacion</h1>
     </div>
 </template>
 

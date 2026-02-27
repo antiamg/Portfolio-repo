@@ -14,7 +14,6 @@ import { onMounted, onUnmounted, ref } from 'vue'
 interface MenuItems {
     label: string,
     href: string,
-    onClick?: () => void
 }
 
 interface Props {
@@ -67,15 +66,13 @@ onUnmounted(()=> {
                 <NavigationMenuList class="flex flex-col sm:flex-row">
 
                 <NavigationMenuItem v-for="item in items" :key="item.label" >
-                    <a 
-                    :href="item.href" 
-                    @click.prevent="item.onClick ? item.onClick() : null"
-                    >
-                        <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md bg-[#bbe991] text-[#4c964e] hover:text-[#faf6ec] hover:bg-[##bbe991] transition-all']">
+                    <RouterLink :to="item.href" active-class="font-bold">
+                        <NavigationMenuLink 
+                            :class="[navigationMenuTriggerStyle(), 'text-md  bg-[#cef8a7] text-[#55ad58] hover:text-[#efaca5] hover:bg-[#cef8a7] transition-all']"
+  >
                             {{ item.label }}
                         </NavigationMenuLink>
-                    
-                    </a>
+                    </RouterLink>
                 </NavigationMenuItem>
 
 
@@ -92,19 +89,19 @@ onUnmounted(()=> {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 3px;
-    color: #4c964e;
+    color: #55ad58;
     width: 35px;
     height: 35px;
 }
 
 .icon-home:hover {
 
-    color: #faf6ec;
+    color: #efaca5;
     
 }
 
 .extra-nav {
-  background-color:#bbe991;
+  background-color:#cef8a7;
   opacity: 0.7;
   box-shadow: rgba(0, 0, 0, 0.7);
   position: fixed;

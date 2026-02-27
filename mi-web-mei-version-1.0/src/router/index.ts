@@ -56,12 +56,12 @@ export const router = createRouter({
           component: Contacto
         },
         {
-          path: '/precios',
+          path: 'precios',
           name: 'precios',
           component: Precios
         },
         {
-          path: '/disponibilidad',
+          path: 'disponibilidad',
           name: 'disponibilidad',
           component: Disponibilidad
         },

@@ -2,26 +2,23 @@
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
 
 
+
  const menuItems = [
   {
-    label: 'Portada',
-    href: '#',
-    // onClick: () => scrollToSection('#')
+    label: 'Inicio',
+    href: '',
   },
   {
     label: 'Galería',
-    href: '#galeria',
-    // onClick: () => scrollToSection('#vehiculis')
+    href: 'galeria',    
   },
   {
     label: 'Información',
-    href: '#informacion',
-    // onClick: () => scrollToSection('#videre')
+    href: 'informacion',    
   },
   {
     label: 'Contacto',
-    href: '#contacto',
-    // onClick: () => scrollToSection('#contactus')
+    href: 'contacto',   
   },
  ] 
 </script>

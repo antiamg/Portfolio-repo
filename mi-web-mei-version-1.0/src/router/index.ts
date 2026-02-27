@@ -16,7 +16,7 @@ export const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'portada',
       component: Portada
     },
     {
@@ -28,7 +28,7 @@ export const router = createRouter({
           component: Galeria
         },
         {
-          path: 'gallery',
+          path: 'galeria',
                 component: Layout,
                 children:[
                     

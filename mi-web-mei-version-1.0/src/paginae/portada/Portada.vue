@@ -6,7 +6,7 @@ import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide
  const menuItems = [
   {
     label: 'Inicio',
-    href: '',
+    href: '/',
   },
   {
     label: 'Galería',

@@ -57,19 +57,19 @@ onUnmounted(()=> {
             <Menu/>
         </Toggle>
 
-        <nav v-if="videreMenu" class="extra-nav flex flex-col sm:flex-row md:justify-between px-3 ">
+        <nav v-if="videreMenu" class="extra-nav flex flex-col sm:flex-row justify-between px-3 ">
             <RouterLink :to="homeRoute">
             <HouseHeart class ="icon-home"/>
             </RouterLink>
 
             <NavigationMenu>
-                <NavigationMenuList class="flex flex-col sm:flex-row">
+                <NavigationMenuList class="flex flex-col sm:flex-row" >
 
                 <NavigationMenuItem v-for="item in items" :key="item.label" >
-                    <RouterLink :to="item.href" active-class="font-bold">
+                    <RouterLink :to="item.href" v-slot="{ isActive }">
                         <NavigationMenuLink 
-                            :class="[navigationMenuTriggerStyle(), 'text-md  bg-[#cef8a7] text-[#55ad58] hover:text-[#efa5b9] hover:bg-[#cef8a7] transition-all']"
-  >
+                            :class="[navigationMenuTriggerStyle(), 'text-md  bg-[#f9bece] text-[#faf6ec] hover:text-[#b75b74] hover:bg-[#f9bece] transition-all', {'font-bold text-[#b75b74]': isActive }]"
+                            >                         
                             {{ item.label }}
                         </NavigationMenuLink>
                     </RouterLink>
@@ -88,24 +88,23 @@ onUnmounted(()=> {
 .icon-home {
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 3px;
-    color: #55ad58;
+    margin-left: 1px;
+    color: #faf6ec;
     width: 35px;
     height: 35px;
 }
 
 .icon-home:hover {
 
-    color: #efa5b9;
+    color: #b75b74;
     
 }
 
 .extra-nav {
-  background-color:#cef8a7;
+  background-color:#f9bece;
   opacity: 0.7;
-  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.7);
   position: fixed;
-  margin-left: 3px;
   top: 0;
   width: 11rem;
   border-radius: 0 0 1rem 0;
@@ -116,7 +115,7 @@ onUnmounted(()=> {
   .extra-nav {
     width: 100%;
     border-radius: 0;
-    opacity: 0;
+    opacity: 1;
     left: 0;
   }
 }

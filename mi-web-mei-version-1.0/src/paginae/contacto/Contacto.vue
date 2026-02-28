@@ -22,10 +22,10 @@ const menuItems = [
 
 
 <template>
-    <div>
+    <header>
         <NavigatorPrimarius :items="menuItems" home-route="/" />
-    </div>
-    <div>
+    </header>
+    <div class="titulus">
 <h1>contacto</h1>
     </div>
 </template>
@@ -33,5 +33,7 @@ const menuItems = [
 
 
 <style scoped>
-
+.titulus{
+  
+}
 </style>

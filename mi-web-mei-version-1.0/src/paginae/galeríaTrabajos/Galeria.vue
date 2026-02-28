@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
+import { Card, CardContent } from '@/components/ui/card'
 const menuItems = [
   {
     label: 'Inicio',
@@ -22,9 +23,9 @@ const menuItems = [
 
 
 <template>
-    <div>
+    <header>
    <NavigatorPrimarius :items="menuItems" home-route="/" />     
-    </div>
+    </header>
     <div>
 <h1>galería</h1>
     </div>

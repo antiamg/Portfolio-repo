@@ -51,13 +51,13 @@ onUnmounted(()=> {
     <div>
 
         <Toggle
-            class="fixed top-2 right-4 hover:bg-[#efaca5] "
+            class="fixed top-2 right-4 hover:bg-[#efa5b9] "
             @click="videreMenu =!videreMenu"
             >
             <Menu/>
         </Toggle>
 
-        <nav v-if="videreMenu" class="extra-nav flex flex-col sm:flex-row justify-between px-3 ">
+        <nav v-if="videreMenu" class="extra-nav flex flex-col sm:flex-row md:justify-between px-3 ">
             <RouterLink :to="homeRoute">
             <HouseHeart class ="icon-home"/>
             </RouterLink>
@@ -68,7 +68,7 @@ onUnmounted(()=> {
                 <NavigationMenuItem v-for="item in items" :key="item.label" >
                     <RouterLink :to="item.href" active-class="font-bold">
                         <NavigationMenuLink 
-                            :class="[navigationMenuTriggerStyle(), 'text-md  bg-[#cef8a7] text-[#55ad58] hover:text-[#efaca5] hover:bg-[#cef8a7] transition-all']"
+                            :class="[navigationMenuTriggerStyle(), 'text-md  bg-[#cef8a7] text-[#55ad58] hover:text-[#efa5b9] hover:bg-[#cef8a7] transition-all']"
   >
                             {{ item.label }}
                         </NavigationMenuLink>
@@ -96,15 +96,16 @@ onUnmounted(()=> {
 
 .icon-home:hover {
 
-    color: #efaca5;
+    color: #efa5b9;
     
 }
 
 .extra-nav {
   background-color:#cef8a7;
   opacity: 0.7;
-  box-shadow: rgba(0, 0, 0, 0.7);
+  text-align: left;
   position: fixed;
+  margin-left: 3px;
   top: 0;
   width: 11rem;
   border-radius: 0 0 1rem 0;
@@ -115,7 +116,7 @@ onUnmounted(()=> {
   .extra-nav {
     width: 100%;
     border-radius: 0;
-    opacity: 1;
+    opacity: 0;
     left: 0;
   }
 }

@@ -22,9 +22,9 @@ const menuItems = [
 
 
 <template>
-    <div>
+    <header>
         <NavigatorPrimarius :items="menuItems" home-route="/" />
-    </div>
+    </header>
     <div>
 <h1>informacion</h1>
     </div>

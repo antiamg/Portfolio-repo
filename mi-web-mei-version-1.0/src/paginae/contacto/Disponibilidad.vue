@@ -5,7 +5,7 @@
 
 <template>
     <div>
-<h1>galería</h1>
+<h1>CALENDARIO AQUI</h1>
     </div>
 </template>
 

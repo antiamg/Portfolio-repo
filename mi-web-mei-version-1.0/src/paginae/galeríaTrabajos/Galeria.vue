@@ -28,12 +28,14 @@ const menuItems = [
    <NavigatorPrimarius :items="menuItems" home-route="/" />     
     </header>
 
-    <div class="flex flex-col transition-all h-screen w-screen bg-[#faf6ec]">   
-    <div class="text-[#a5dd7f] text-5xl md:text-6xl lg:text-8xl text-left mt-15 ml-3">
-      <h1 class="titulus">Retratos</h1>
-    </div>  
-    </div>
+    <main>
+      <div class="flex flex-col transition-all h-screen w-screen bg-[#faf6ec]">   
+        <div class="text-[#a5dd7f] text-5xl md:text-6xl lg:text-8xl text-left mt-15 ml-3">
 
+        </div>  
+       </div>
+    </main>
+    
     <footer class="w-full bg-[#efa5b9] text-[#faf6ec] text-left py-8">
 <div class="flex md:flex-row md:justify-around text-left gap-8 max-w-3xl mx-auto">
 

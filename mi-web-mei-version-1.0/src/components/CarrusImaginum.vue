@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
-import {Autoplay} from 'embla-carousel-autoplay'
+// import {Autoplay} from 'embla-carousel-autoplay'
 
 interface Props{
     photos: string[]
@@ -32,9 +32,7 @@ const props = withDefaults(defineProps<Props>(), {
             dragFree: props.dragFree
             }"
 
-        :plugins="[Autoplay({
-            delay: props.autoPlayDelay,
-            })]"
+        
         >
             <CarouselContent>
             <CarouselItem v-for="(photo, index) in props.photos" :key="index">

@@ -119,7 +119,7 @@ const menuItems = [
 
           <div class="space-y-3">
             <Label class="text-m leading-4.5">
-              En caso de solicitar una comisión, seleccione la fecha aproximada
+              En caso de solicitar una comisión, seleccione la fecha aproximada en la que le gustaría recibirla
             </Label>
 
             <Popover>

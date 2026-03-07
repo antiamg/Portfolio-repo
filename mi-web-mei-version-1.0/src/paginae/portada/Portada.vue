@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
 import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide-vue-next'
+import { ref } from 'vue';
 
-
+const isHover = ref(false)
  const menuItems = [
   {
     label: 'Inicio',
@@ -13,7 +14,7 @@ import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide
     href: 'galeria',    
   },
   {
-    label: 'Información',
+    label: 'Sobre mí',
     href: 'informacion',    
   },
   {
@@ -29,9 +30,36 @@ import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide
         <NavigatorPrimarius :items="menuItems" home-route="/" />
     </header>
     
-    <div class="flex flex-col transition-all h-screen w-screen bg-[#faf6ec] text-[#efa5b9] text-5xl md:text-6xl lg:text-8xl justify-center items-center">   
-<h1 class="titulus">Portfolio</h1>
-    </div>
+    <main class="flex flex-col h-screen w-screen bg-[#faf6ec] text-[#efa5b9] justify-center items-center">
+
+  <div 
+  class="relative w-[330px] h-[330px] md:w-[500px] md:h-[500px] transition-all "
+  @mouseenter="isHover = true"
+  @mouseleave="isHover = false"
+  >
+    
+    <img 
+      src="/imagines/arriba-sobre.png"
+      alt=""
+      class="absolute inset-0 w-full"
+    >
+
+    <img 
+      src="/imagines/texto-portada.png"
+      alt=""
+      class="absolute inset-0 w-full transition-transform duration-500 ease-out"
+      :class="{'-translate-y-[110px] md:-translate-y-[160px]': isHover }"
+    />
+
+    <img 
+      src="/imagines/abajo-sobre.png"
+      alt=""
+      class="absolute inset-0 w-full"
+    >
+
+  </div>
+
+</main>
 
     <footer class="w-full bg-[#efa5b9] text-[#faf6ec] text-left py-8">
 <div class="flex md:flex-row md:justify-around text-left gap-8 max-w-3xl mx-auto">

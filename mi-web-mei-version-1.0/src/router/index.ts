@@ -3,7 +3,6 @@ import Portada from "@/paginae/portada/Portada.vue";
 import Galeria from "@/paginae/galeríaTrabajos/Galeria.vue";
 import Informacion from "@/paginae/información/Informacion.vue";
 import Contacto from "@/paginae/contacto/Contacto.vue";
-import Layout from "@/paginae/galeríaTrabajos/Layout.vue";
 import Artwork from "@/paginae/galeríaTrabajos/Artwork.vue";
 import Disponibilidad from "@/paginae/contacto/Disponibilidad.vue";
 import Precios from "@/paginae/contacto/Precios.vue";
@@ -28,16 +27,10 @@ export const router = createRouter({
           component: Galeria
         },
         {
-          path: 'galeria',
-                component: Layout,
-                children:[
-                    
-                    {
-                        path: ':id',
-                        name: 'artwork-detail',
-                        component: Artwork
-                    }
-                ]
+          path: ':id',
+          name: 'artwork-detail',
+          component: Artwork,
+        
         },
 
       ]

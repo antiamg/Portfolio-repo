@@ -32,7 +32,7 @@ const menuItems = [
     href: 'galeria',    
   },
   {
-    label: 'Información',
+    label: 'Sobre mí',
     href: 'informacion',    
   },
   {

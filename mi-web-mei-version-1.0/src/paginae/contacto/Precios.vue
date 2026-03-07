@@ -13,7 +13,7 @@ const menuItems = [
     href: 'galeria',    
   },
   {
-    label: 'Información',
+    label: 'Sobre mí',
     href: 'informacion',    
   },
   {
@@ -40,7 +40,7 @@ const menuItems = [
 <main class="flex flex-row gap-10 justify-start w-screen h-screen">
   <!-- imagenes -->
   <div class="flex flex-col w-1/2">
-  <img class="rounded mt-10 mb-10 ml-10 w-70 md:w-65 lg:w-[320px] transition-all" src="/imagines/retrato-daniela.jpg" alt="">
+  <!-- <img class="rounded mt-10 mb-10 ml-10 w-70 md:w-65 lg:w-[320px] transition-all" src="/imagines/retrato-daniela-corregido.png" alt=""> -->
   </div>
  
   <!-- texto -->

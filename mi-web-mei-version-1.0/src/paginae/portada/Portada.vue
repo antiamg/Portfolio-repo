@@ -2,6 +2,9 @@
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
 import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide-vue-next'
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const isHover = ref(false)
  const menuItems = [
@@ -22,12 +25,16 @@ const isHover = ref(false)
     href: 'contacto',   
   },
  ] 
+
+ const goTo = (route: string) => {
+  router.push(route)
+}
 </script>
 
 
 <template>
     <header>
-        <NavigatorPrimarius :items="menuItems" home-route="/" />
+        <!-- <NavigatorPrimarius :items="menuItems" home-route="/" /> -->
     </header>
     
     <main class="flex flex-col h-screen w-screen bg-[#faf6ec] text-[#efa5b9] justify-center items-center">
@@ -39,7 +46,7 @@ const isHover = ref(false)
   >
     
     <img 
-      src="/imagines/arriba-sobre.png"
+      src="/imagines/arriba-sobre-PORTADA.png"
       alt=""
       class="absolute inset-0 w-full"
     >
@@ -50,6 +57,32 @@ const isHover = ref(false)
       class="absolute inset-0 w-full transition-transform duration-500 ease-out"
       :class="{'-translate-y-[110px] md:-translate-y-[160px]': isHover }"
     />
+
+    <img 
+      src="/imagines/sobre-mi.png"
+      alt=""
+      @click="goTo('informacion')"
+      class="absolute w-[100px] left-[15px] top-[265px] md:left-[45px] md:top-[380px] md:w-[154px] md:h-[137px] transition-transform duration-500 ease-out"
+      :class="{'-translate-y-[335px] -translate-x-[55px] md:-translate-y-[420px] md:-translate-x-[70px]': isHover }"
+    />
+
+    <img 
+      src="/imagines/boton-galeria.png"
+      alt=""
+      @click="goTo('galeria')"
+      class="absolute w-[100px] left-[100px] top-[265px] md:left-[150px] md:top-[380px] md:w-[154px] md:h-[137px] transition-transform duration-500 ease-out"
+      :class="{'-translate-y-[400px] md:-translate-y-[510px]': isHover }"
+    />
+
+    <img 
+      src="/imagines/boton-contacto.png"
+      alt=""
+      @click="goTo('contacto')"
+      class="absolute w-[100px] left-[210px] top-[265px] md:left-[320px] md:top-[380px] md:w-[154px] md:h-[137px] transition-transform duration-500 ease-out"
+      :class="{'-translate-y-[340px] -translate-x-[-50px] md:-translate-y-[420px] md:-translate-x-[-50px]': isHover }"
+    />
+
+
 
     <img 
       src="/imagines/abajo-sobre.png"

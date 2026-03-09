@@ -6,9 +6,9 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <main>   
+  <div class="min-h-screen bg-[url('/imagines/fondo.png')] bg-cover bg-center">
     <RouterView />
-  </main>
+  </div>
 </template>
 
 <style scoped>

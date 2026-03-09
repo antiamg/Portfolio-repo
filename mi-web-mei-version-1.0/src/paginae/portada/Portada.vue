@@ -37,7 +37,7 @@ const isHover = ref(false)
         <!-- <NavigatorPrimarius :items="menuItems" home-route="/" /> -->
     </header>
     
-    <main class="flex flex-col h-screen w-screen bg-[#faf6ec] text-[#efa5b9] justify-center items-center">
+    <main class="flex flex-col h-screen w-screen text-[#efa5b9] justify-center items-center">
 
   <div 
   class="relative w-[330px] h-[330px] md:w-[500px] md:h-[500px] transition-all "
@@ -62,7 +62,7 @@ const isHover = ref(false)
       src="/imagines/sobre-mi.png"
       alt=""
       @click="goTo('informacion')"
-      class="absolute w-[100px] left-[15px] top-[265px] md:left-[45px] md:top-[380px] md:w-[154px] md:h-[137px] transition-transform duration-500 ease-out"
+      class="absolute w-[100px] left-[15px] top-[265px] md:left-[45px] md:top-[380px] md:w-[154px] md:h-[137px] transition-all transition-transform duration-500 ease-out"
       :class="{'-translate-y-[335px] -translate-x-[55px] md:-translate-y-[420px] md:-translate-x-[70px]': isHover }"
     />
 
@@ -70,7 +70,7 @@ const isHover = ref(false)
       src="/imagines/boton-galeria.png"
       alt=""
       @click="goTo('galeria')"
-      class="absolute w-[100px] left-[100px] top-[265px] md:left-[150px] md:top-[380px] md:w-[154px] md:h-[137px] transition-transform duration-500 ease-out"
+      class="absolute w-[100px] left-[100px] top-[265px] md:left-[150px] md:top-[380px] md:w-[154px] md:h-[137px] transition-all transition-transform duration-500 ease-out"
       :class="{'-translate-y-[400px] md:-translate-y-[510px]': isHover }"
     />
 
@@ -78,7 +78,7 @@ const isHover = ref(false)
       src="/imagines/boton-contacto.png"
       alt=""
       @click="goTo('contacto')"
-      class="absolute w-[100px] left-[210px] top-[265px] md:left-[320px] md:top-[380px] md:w-[154px] md:h-[137px] transition-transform duration-500 ease-out"
+      class="absolute w-[100px] left-[210px] top-[265px] md:left-[320px] md:top-[380px] md:w-[154px] md:h-[137px] transition-all transition-transform duration-500 ease-out"
       :class="{'-translate-y-[340px] -translate-x-[-50px] md:-translate-y-[420px] md:-translate-x-[-50px]': isHover }"
     />
 

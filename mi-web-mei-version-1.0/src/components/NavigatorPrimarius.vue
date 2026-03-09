@@ -52,7 +52,7 @@ onUnmounted(()=> {
     <div>
 
         <Toggle
-            class="fixed top-2 right-4 hover:bg-[#efa5b9]"
+            class="fixed top-2 right-4 bg-[#faf6ec] hover:bg-[#efa5b9]"
             @click="videreMenu =!videreMenu"
             >
             <Menu/>
@@ -68,7 +68,7 @@ onUnmounted(()=> {
                 <NavigationMenuItem v-for="item in items" :key="item.label" class="w-full">
                     <RouterLink :to="item.href" v-slot="{ isActive }">
                         <NavigationMenuLink 
-                            :class="[navigationMenuTriggerStyle(), 'text-md justify-start text-left pl-1  bg-[#faf6ec] text-[#f9bece] hover:text-[#b75b74] hover:bg-[#f9bece] transition-all', {'font-bold text-[#b75b74]': isActive }]"
+                            :class="[navigationMenuTriggerStyle(), 'text-md justify-start text-left pl-1  bg-[#faf6ec] text-[#f9bece] hover:text-[#b75b74] hover:bg-[#faf6ec] transition-all', {'font-bold text-[#b75b74]': isActive }]"
                             >                         
                             {{ item.label }}
                         </NavigationMenuLink>

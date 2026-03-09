@@ -1,36 +1,23 @@
 <script setup lang="ts">
-import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
-import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide-vue-next'
-const menuItems = [
-  {
-    label: 'Inicio',
-    href: '/',
-  },
-  {
-    label: 'Galería',
-    href: 'galeria',    
-  },
-  {
-    label: 'Sobre mí',
-    href: 'informacion',    
-  },
-  {
-    label: 'Contacto',
-    href: 'contacto',   
-  },
- ] 
+import Button from '@/components/ui/button/Button.vue';
+import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
+
 </script>
 
-
 <template>
-    <header>
-        <NavigatorPrimarius :items="menuItems" home-route="/" />
-    </header>
-    <main class="w-screen h-screen w-full h-full bg-[#faf6ec]">
-<h1>informacion</h1>
-    </main>
+<header class="w-screen h-screen bg-[url('/imagines/fondo.png')] bg-cover bg-center">
+ <Button class="ml-7 md:ml-5 py-5 md:px-6 md:text-l bg-transparent hover:bg-[#efa5b9] hover:text-[#faf6ec] text-[#efa5b9] transition-all">
+         <RouterLink class="w-full text-center" to="/galeria">
+              Atrás
+         </RouterLink>
+    </Button>   
+</header>
 
-     <footer class="w-full bg-[#efa5b9] text-[#faf6ec] text-left py-8">
+<main class="min-h-screen">
+
+</main>
+
+<footer class="w-full bg-[#efa5b9] text-[#faf6ec] text-left py-8">
 <div class="flex md:flex-row md:justify-around text-left gap-8 max-w-3xl mx-auto">
 
     <div class="space-y-4 ml-5 text-left">
@@ -61,10 +48,10 @@ const menuItems = [
         <h3 class="text-l md:text-xl font-bold text-[#faf6ec]">Visita mis redes!</h3>
         <div class="flex gap-8 justify-center">
         
-          <X class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
+          
           <Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <Linkedin class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <MessageCircle class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
+          <Music2Icon class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
+          
               
         </div>
     </div>
@@ -74,6 +61,4 @@ const menuItems = [
 
 
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
-import {Phone, Mail, MapPin, X, Instagram, Linkedin, MessageCircle} from 'lucide-vue-next'
+import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'
 
@@ -125,10 +125,8 @@ const isHover = ref(false)
         <h3 class="text-l md:text-xl font-bold text-[#faf6ec]">Visita mis redes!</h3>
         <div class="flex gap-8 justify-center">
         
-          <X class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <Linkedin class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <MessageCircle class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
+          <a href="https://www.instagram.com/msmouri_?igsh=anV2d2NvNGdzNw%3D%3D&utm_source=qr"><Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]" /></a>
+          <a href="https://www.tiktok.com/@msmouri_?_r=1&_t=ZN-94Yci0YdFCA"><Music2Icon class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/></a>
               
         </div>
     </div>

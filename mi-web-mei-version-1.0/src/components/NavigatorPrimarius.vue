@@ -52,23 +52,23 @@ onUnmounted(()=> {
     <div>
 
         <Toggle
-            class="fixed top-2 right-4 bg-[#faf6ec] hover:bg-[#efa5b9]"
+            class="fixed top-2 right-4 bg-transparent hover:bg-[#efa5b9] sm:hidden data-[state=on]:bg-transparent"
             @click="videreMenu =!videreMenu"
             >
             <Menu/>
         </Toggle>
 
 
-        <nav v-if="videreMenu" class="extra-nav flex flex-col pt-3 justify-start items-start sm:flex-row px-3">
+        <nav v-if="videreMenu" class="extra-nav flex flex-row pt-3 justify-start items-start sm:flex-row px-3">
             
 
             <NavigationMenu>
-                <NavigationMenuList class="flex flex-col sm:flex-row" >
+                <NavigationMenuList class="flex flex-row" >
 
                 <NavigationMenuItem v-for="item in items" :key="item.label" class="w-full">
                     <RouterLink :to="item.href" v-slot="{ isActive }">
                         <NavigationMenuLink 
-                            :class="[navigationMenuTriggerStyle(), 'text-md justify-start text-left pl-1  bg-[#faf6ec] text-[#f9bece] hover:text-[#b75b74] hover:bg-[#faf6ec] transition-all', {'font-bold text-[#b75b74]': isActive }]"
+                            :class="[navigationMenuTriggerStyle(), 'text-md justify-start text-left pl-1  bg-transparent text-white hover:text-[#e7a6b7] hover:bg-transparent transition-all', {'font-bold text-[#e7a6b7]': isActive }]"
                             >                         
                             {{ item.label }}
                         </NavigationMenuLink>
@@ -85,19 +85,12 @@ onUnmounted(()=> {
 
 
 <style scoped>
-.icon-home {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 1px;
-    color: #faf6ec;
-    width: 35px;
-    height: 35px;
-}
+
 
 
 
 .extra-nav {
-  background-color:#faf6ec;
+  background-color: #d6e1a3;
   opacity: 0.7;
   box-shadow: rgba(0, 0, 0, 0.7);
   position: fixed;

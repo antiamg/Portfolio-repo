@@ -36,27 +36,32 @@ const menuItems = [
   src: string;
   size: string;
   route: string;
+  solapa: string;
 }
 const sobres: Sobre[] = [
   {
     src: "/imagines/galeria/mama-boli-cerca.png",
     size: "w-[100px] lg:w-[160px] transition-all",
-    route:"/galeria/retratos"
+    route:"/galeria/retratos",
+    solapa:"/imagines/sobre-retratos.png"
   },
   {
     src: "/imagines/galeria/cartel-trans.jpg",
     size: "w-[100px] lg:w-[150px] transition-all",
-    route:"/galeria/carteleria"
+    route:"/galeria/carteleria",
+    solapa:"/imagines/sobre-carteleria.png"
   },
   {
     src: "/imagines/galeria/comic.png",
     size: "w-[140px] lg:w-[170px] transition-all",
-    route:"/galeria/comic"
+    route:"/galeria/comic",
+    solapa:"/imagines/sobre-comic.png"
   },
   {
     src: "/imagines/galeria/juego-completo.JPG",
     size: "w-[120px] lg:w-[160px] transition-all",
-    route:"/galeria/diseno"
+    route:"/galeria/diseno",
+    solapa:"/imagines/sobre-diseno.png"
   }
 ]
 
@@ -70,7 +75,7 @@ const sobres: Sobre[] = [
 
     <main class="w-screen min-h-screen ">
       <div class="flex flex-row justify-center ">
-        <img src="/imagines/titulo-proyectos.png" alt="" class="mt-20 w-[60%] md:w-[40%]">
+        <img src="/imagines/titulo-proyectos.png" alt="" class="mt-30 mb-5 sm:mt-35 sm:mb-10 w-[60%] md:w-[40%]">
       </div>
 
       <div class="flex justify-center gap-10 px-10 mt-16 mb-16 items-start flex-wrap">
@@ -82,13 +87,13 @@ const sobres: Sobre[] = [
     @click="goTo(sobre.route)"
   >
     
-    <!-- parte superior del sobre -->
+    <!-- parte arriba -->
     <img 
       src="/imagines/arriba-sobre.png"
       class="absolute inset-0 w-full pointer-events-none"
     >
 
-    <!-- imagen dentro del sobre -->
+    <!-- imagen -->
     <img 
       :src="sobre.src"
       class="absolute top-[60%] left-1/2 
@@ -97,11 +102,11 @@ const sobres: Sobre[] = [
       :class="[sobre.size, 'hover:-translate-y-[130px]']"
     />
 
-    <!-- parte inferior del sobre -->
+    <!-- parte d abajo -->
     <img 
-      src="/imagines/sobre-en-blanco.png"
+      :src="sobre.solapa"
       class="absolute inset-0 w-full pointer-events-none"
-    >
+    />
 
   </div>
 
@@ -140,9 +145,9 @@ const sobres: Sobre[] = [
         <h3 class="text-l md:text-xl font-bold text-[#faf6ec]">Visita mis redes!</h3>
         <div class="flex gap-8 justify-center">
         
+          <a href="https://www.instagram.com/msmouri_?igsh=anV2d2NvNGdzNw%3D%3D&utm_source=qr"><Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]" /></a>
+          <a href="https://www.tiktok.com/@msmouri_?_r=1&_t=ZN-94Yci0YdFCA"><Music2Icon class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/></a>
           
-          <Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <Music2Icon class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
           
               
         </div>

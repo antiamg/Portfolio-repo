@@ -1,11 +1,22 @@
 <script setup lang="ts">
 import Button from '@/components/ui/button/Button.vue';
 import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
+import { detalles } from './data';
+import { computed } from 'vue';
+import { router } from '@/router';
+
+const comic = computed(() =>
+  detalles.filter(d => d.categoria === "comic")
+)
+
+const goToDetail = (id:number) => {
+  router.push(`/galeria/${id}`)
+}
 
 </script>
 
 <template>
-<header class="w-screen h-screen bg-[url('/imagines/fondo.png')] bg-cover bg-center">
+<header class="w-screen">
  <Button class="ml-7 md:ml-5 py-5 md:px-6 md:text-l bg-transparent hover:bg-[#efa5b9] hover:text-[#faf6ec] text-[#efa5b9] transition-all">
          <RouterLink class="w-full text-center" to="/galeria">
               Atrás
@@ -14,7 +25,38 @@ import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
 </header>
 
 <main class="min-h-screen">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-10">
 
+  <div>
+    <img src="/imagines/titulo-comic.png" alt="" class="mt-10">
+  </div>
+  <div
+  v-for="obra in comic"
+  :key="obra.id"
+  class="cursor-pointer group"
+  @click="goToDetail(obra.id)"
+  >
+
+  <div class="relative w-full aspect-square overflow-hidden rounded-xl">
+
+    <!-- imagen -->
+    <img
+      :src="`/imagines/galeria/${obra.imago}`"
+      class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+    >
+
+    <!-- overlay -->
+    <div class="absolute inset-0 opacity-0 group-hover:opacity-90 transition flex items-center justify-center bg-[url('/imagines/fondo-verde.png')] h-full w-full object-cover bg-cover bg-center">
+      <p class="text-3xl font-bold text-transparent bg-clip-text bg-white mix-blend-overlay">
+        {{ obra.nomen }}
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
 </main>
 
 <footer class="w-full bg-[#efa5b9] text-[#faf6ec] text-left py-8">
@@ -49,8 +91,8 @@ import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
         <div class="flex gap-8 justify-center">
         
           
-          <Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
-          <Music2Icon class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/>
+          <a href="https://www.instagram.com/msmouri_?igsh=anV2d2NvNGdzNw%3D%3D&utm_source=qr"><Instagram class="md:w-10 md:h-10 hover:text-[#e2ffc7]" /></a>
+          <a href="https://www.tiktok.com/@msmouri_?_r=1&_t=ZN-94Yci0YdFCA"><Music2Icon class="md:w-10 md:h-10 hover:text-[#e2ffc7]"/></a>
           
               
         </div>

@@ -48,7 +48,7 @@ const isHover = ref(false)
     <img 
       src="/imagines/arriba-sobre-PORTADA.png"
       alt=""
-      class="absolute inset-0 w-full"
+      class="absolute inset-0 w-full pointer-events-none"
     >
 
     <img 
@@ -87,7 +87,7 @@ const isHover = ref(false)
     <img 
       src="/imagines/abajo-sobre.png"
       alt=""
-      class="absolute inset-0 w-full"
+      class="absolute inset-0 w-full pointer-events-none"
     >
 
   </div>

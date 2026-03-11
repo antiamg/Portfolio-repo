@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
+import StarBullet from '@/components/StarBullet.vue';
 import Button from '@/components/ui/button/Button.vue';
 import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
 
@@ -38,26 +39,96 @@ const menuItems = [
     </Button>
   </div>
   
-<main class="flex flex-row gap-10 justify-start w-screen h-screen">
-  <!-- imagenes -->
-  <div class="flex flex-col w-1/2">
-  <!-- <img class="rounded mt-10 mb-10 ml-10 w-70 md:w-65 lg:w-[320px] transition-all" src="/imagines/retrato-daniela-corregido.png" alt=""> -->
+<main class="w-screen min-h-screen">
+
+  <div class="max-w-4xl mx-auto px-6">
+<div class="md:ml-50 mt-10 mb-10 grid grid-cols-[auto_1fr] gap-6 items-start">
+    <div class="w-[180px] md:w-[220px] aspect-[4/5] overflow-hidden rounded-xl">
+      <img 
+        src="/imagines/galeria/mama-boli-cerca.png"
+        class="w-full h-full object-cover"
+        alt=""
+      >
+    </div>
+    <div>
+      <h1 class="font-bold md:text-xl text-[#413311]">Bolígrafo</h1>
+      <h3 class="font-medium mt-3 text-[#413311]"> Un color</h3>
+      <StarBullet>A5: 20€</StarBullet>
+      <StarBullet>A4: 25€</StarBullet>
+      <h3 class="font-medium mt-3 text-[#413311]">Varios</h3>
+      <StarBullet>A5: 30€</StarBullet>
+      <StarBullet>A4: 35€</StarBullet>
+
+
+    </div>
   </div>
- 
-  <!-- texto -->
-  <div class="w-full">
-    <h3 class="font-bold mt-10 ml-10 lg:ml-0 md:text-xl lg:text-2xl text-left">Bolígrafo</h3>
-    <p class="mt-3 ml-10 mr-5 text-sm md:text-lg lg:ml-0 lg:text-xl text-left md:leading-relaxed">
-     <strong>Monocromo</strong> <br>
-     -A5: 20€<br>
-     -A4: 25€ <br> 
-     <strong>Monocromo</strong> <br>
-     -A5: 20€<br>
-     -A4: 25€ 
-    </p>
+
+  <div class="md:ml-50  mb-10 grid grid-cols-[auto_1fr] gap-6 items-start">
+    <div class="w-[180px] md:w-[220px] aspect-[4/5] overflow-hidden rounded-xl">
+      <img 
+        src="/imagines/galeria/telefono.png"
+        class="w-full h-full object-cover"
+        alt=""
+      >
+    </div>
+    <div>
+      <h1 class="font-bold md:text-xl text-[#413311]">Lápices</h1>
+      <h3 class="font-medium mt-3 text-[#413311]"> Un color</h3>
+      <StarBullet>A5: 20€</StarBullet>
+      <StarBullet>A4: 25€</StarBullet>
+      <h3 class="font-medium mt-3 text-[#413311]">Varios</h3>
+      <StarBullet>A5: 30€</StarBullet>
+      <StarBullet>A4: 35€</StarBullet>
+    </div>
+  </div>
+
+  <div class="md:ml-50  mb-10 grid grid-cols-[auto_1fr] gap-6 items-start">
+    <div class="w-[180px] md:w-[220px] aspect-[4/5] overflow-hidden rounded-xl">
+      <img 
+        src="/imagines/galeria/retrato-daniela-corregido.png"
+        class="w-full h-full object-cover"
+        alt=""
+      >
+    </div>
+    <div>
+      <h1 class="font-bold md:mr-45 md:text-xl text-[#413311]">Técnica mixta: lápices y acuarelas</h1>
+      <StarBullet class="mt-3">A5: 35€</StarBullet>
+      <StarBullet>A4: 40€</StarBullet>
+    </div>
+  </div>
+
+  <div class="md:ml-50  mb-10 grid grid-cols-[auto_1fr] gap-6 items-start">
+    <div class="w-[180px] md:w-[220px] aspect-[4/5] overflow-hidden rounded-xl">
+      <img 
+        src="/imagines/galeria/avo-gouache-cerca.png"
+        class="w-full h-full object-cover"
+        alt=""
+      >
+    </div>
+    <div>
+      <h1 class="font-bold md:text-xl text-[#413311]">Gouache</h1>
+      <StarBullet class="mt-3">A5: 40€</StarBullet>
+      <StarBullet>A4: 45€</StarBullet>
+    </div>
+  </div>
+
+  <div class="md:ml-50  mb-10 grid grid-cols-[auto_1fr] gap-6 items-start">
+    <div class="w-[180px] md:w-[220px] aspect-[4/5] overflow-hidden rounded-xl">
+      <img 
+        src="/imagines/galeria/mama-digital.PNG"
+        class="w-full h-full object-cover"
+        alt=""
+      >
+    </div>
+    <div>
+      <h1 class="font-bold md:text-xl text-[#413311]">Digital</h1>
+      <StarBullet class="mt-3 mr-25 md:mr-65">El precio dependerá de qué quieras exactamente. ¡Ponte en contacto conmigo para ver los detalles!</StarBullet>
+
+    </div>
+  </div>
+
   </div>
   
-   
 </main>
 
 

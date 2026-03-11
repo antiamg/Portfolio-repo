@@ -64,19 +64,15 @@ const menuItems = [
 
         <p class="text-[#413311]  lg:text-xl md:text-justify leading-relaxed">
           Escríbeme por correo electrónico, por mis redes sociales o ponte en contacto conmigo a través de este formulario.
-          Puedes consultar en las siguientes secciones tanto mi disponibilidad como los precios de las comisiones.
+          Puedes consultar en la siguiente sección unos precios orientativos de las comisiones.
         </p>
 
         <div class="flex w-full gap-6 mt-10">
-          <Button class="flex-1 py-5 md:px-6 md:text-lg bg-[#efa5b9] hover:bg-[#faf6ec] text-[#faf6ec] hover:text-[#efa5b9] transition-all">
-            <RouterLink class="w-full text-center" to="/contacto/disponibilidad">
-              Disponibilidad
-            </RouterLink>
-          </Button>
+          
 
           <Button class="flex-1 py-5 md:px-6 md:text-lg bg-[#efa5b9] hover:bg-[#faf6ec] text-[#faf6ec] hover:text-[#efa5b9] transition-all">
             <RouterLink class="w-full text-center" to="/contacto/precios">
-              Precios comisiones
+              Comisiones
             </RouterLink>
           </Button>
         </div>

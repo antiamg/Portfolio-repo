@@ -4,7 +4,6 @@ import Galeria from "@/paginae/galeria/Galeria.vue";
 import Informacion from "@/paginae/información/Informacion.vue";
 import Contacto from "@/paginae/contacto/Contacto.vue";
 import Artwork from "@/paginae/galeria/Artwork.vue";
-import Disponibilidad from "@/paginae/contacto/Disponibilidad.vue";
 import Precios from "@/paginae/contacto/Precios.vue";
 import Retratos from "@/paginae/galeria/Retratos.vue";
 import Carteleria from "@/paginae/galeria/Carteleria.vue";
@@ -76,11 +75,7 @@ export const router = createRouter({
           name: 'precios',
           component: Precios
         },
-        {
-          path: 'disponibilidad',
-          name: 'disponibilidad',
-          component: Disponibilidad
-        },
+        
 
       ]
     },

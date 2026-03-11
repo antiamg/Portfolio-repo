@@ -4,9 +4,15 @@ export function useScrollToSection() {
     const element = document.getElementById(id)
 
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+      const offset = 120
+      const top =
+        element.getBoundingClientRect().top +
+        window.pageYOffset -
+        offset
+
+      window.scrollTo({
+        top,
+        behavior: "smooth"
       })
     }
   }

@@ -75,7 +75,7 @@ const sobres: Sobre[] = [
 
     <main class="w-screen min-h-screen ">
       <div class="flex flex-row justify-center ">
-        <img src="/imagines/titulo-proyectos.png" alt="" class="mt-30 mb-5 sm:mt-35 sm:mb-10 w-[60%] md:w-[40%]">
+        <img src="/imagines/titulo-proyectos.png" alt="" class="mt-30 mb-5 sm:mt-35 sm:mb-10 w-[80%] md:w-[70%]">
       </div>
 
       <div class="flex justify-center gap-10 px-10 mt-16 mb-16 items-start flex-wrap">

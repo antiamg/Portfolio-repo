@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
-import {Phone, Mail, MapPin, Instagram, Music2Icon, Star} from 'lucide-vue-next'
+import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
 import { useScrollToSection } from "@/composables/scrollToSection"
 import StarBullet from "@/components/StarBullet.vue"
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
+// import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
 import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'
@@ -7,24 +7,24 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const isHover = ref(false)
- const menuItems = [
-  {
-    label: 'Inicio',
-    href: '/',
-  },
-  {
-    label: 'Galería',
-    href: 'galeria',    
-  },
-  {
-    label: 'Sobre mí',
-    href: 'informacion',    
-  },
-  {
-    label: 'Contacto',
-    href: 'contacto',   
-  },
- ] 
+//  const menuItems = [
+//   {
+//     label: 'Inicio',
+//     href: '/',
+//   },
+//   {
+//     label: 'Galería',
+//     href: 'galeria',    
+//   },
+//   {
+//     label: 'Sobre mí',
+//     href: 'informacion',    
+//   },
+//   {
+//     label: 'Contacto',
+//     href: 'contacto',   
+//   },
+//  ] 
 
  const goTo = (route: string) => {
   router.push(route)

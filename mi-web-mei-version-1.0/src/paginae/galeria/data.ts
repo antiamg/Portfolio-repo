@@ -31,7 +31,7 @@ export const detalles: Detalle[] = [
   {
     id: 2,
     nomen: "Cumpleaños",
-    imago: "mama-boli-cerca.png",
+    imago: "mama-digital.PNG",
     imagines:["mama-digital.PNG", "cumpleanos-referencia.jpg"],
     descriptione: "Retrato digital de mi madre, mi hermano y yo por el cumpleaños de mi madre.",
     categoria: "retratos"

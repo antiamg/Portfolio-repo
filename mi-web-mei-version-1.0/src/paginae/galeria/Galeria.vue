@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue';
-import { Card, CardContent } from '@/components/ui/card'
+
 import {Phone, Mail, MapPin, Instagram, Music2Icon} from 'lucide-vue-next'
 import { computed, ref } from 'vue';
 
@@ -8,6 +8,10 @@ import { detalles } from './data';
 import { router } from '@/router';
 
 const isHover = ref(false)
+
+void computed
+void detalles
+void isHover
 
 const goTo = (route: string) => {
   router.push(route)
